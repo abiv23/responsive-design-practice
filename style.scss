@@ -43,11 +43,11 @@ header {
           }
         }
         .menu {
-          display: none;
+          display: inline-block;
         }
-        @media screen and (max-width: 768px){
+        @media only screen and (min-width: 481px){
           .menu {
-            display: inline-block;
+            display: none;
           }
         }
       }
@@ -70,7 +70,7 @@ header {
           font-size: 1.25rem;
           border: 0;
         }
-        .nav-submit {
+        .nav-submit-icon {
           position: absolute;
           width: 6.8rem;
           height: 85%;
@@ -82,19 +82,45 @@ header {
           .search-logo {
             height: 80%;
           }
+          @media screen and (min-width: 481px){
+            .search-logo {
+              display: none;
+            }
+          }
         }
+        @media screen and (min-width: 481px){
+          .nav-submit-icon {
+            display: none;
+          }
+        }
+        .nav-submit {
+          display: none;
+        }
+        @media screen and (min-width: 481px){
+          .nav-submit {
+            display: inline-block;
+            position: absolute;
+            width: 6.8rem;
+            height: 85%;
+            background-color: teal;
+            color: white;
+            border: none;
+            border-radius: .25rem;
+            border: 1px solid red;
+          }
       }
       .links {
         position: absolute;
-        display: inline-block;
+        display: none;
       }
-      @media screen and (max-width: 768px){
+      @media screen and (min-width: 481px){
         .links {
-          display: none;
+          display: inline-block;
         }
       }
     }
   }
+}
 }
 
 main {
@@ -102,48 +128,54 @@ main {
     position: relative;
     background: lightgrey;
     height: 52rem;
-    .agent-img{
-      position: absolute;
-      left: 1rem;
-      height: 25rem;
-    }
-    .name-container {
-      position: absolute;
-      top: 24rem;
-      left: 1rem;
-      .agent-name{
-        font-size: 3rem;
-        position: relative;
-        width: 90vw;
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-      .realtor-cpyrght{
-        position: relative;
-        font-size: 1rem;
-        width: 90vw;
-        margin-top: 0;
-        color: grey;
-      }
-      .contact-btn {
+    .image-container{
+      .agent-img{
         position: absolute;
-        width: 95%;
-        background-color: teal;
-        height: 3rem;
-        border-radius: .25rem;
-        color: white;
-        font-size: 2rem;
+        left: 1rem;
+        height: 25rem;
       }
     }
-    .hero-i-container{
-      position: absolute;
-      top: 35rem;
-      width: 90%;
-      left: 1rem;
-      height: 3rem;
+    .hero-name-container{
+      border: 1px solid red;
       display: flex;
-      justify-content: space-between;
-    }
+      .name-container {
+        position: absolute;
+        top: 24rem;
+        left: 1rem;
+        .agent-name{
+          font-size: 3rem;
+          position: relative;
+          width: 90vw;
+          margin-top: 1rem;
+          margin-bottom: 0;
+        }
+        .realtor-cpyrght{
+          position: relative;
+          font-size: 1rem;
+          width: 90vw;
+          margin-top: 0;
+          color: grey;
+        }
+        .contact-btn {
+          position: absolute;
+          width: 95%;
+          background-color: teal;
+          height: 3rem;
+          border-radius: .25rem;
+          color: white;
+          font-size: 2rem;
+        }
+      }
+      .hero-i-container{
+        position: absolute;
+        top: 35rem;
+        width: 90%;
+        left: 1rem;
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+      }
+  }
     .hero-contact-container {
       position: absolute;
       top: 38rem;

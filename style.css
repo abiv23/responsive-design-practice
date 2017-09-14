@@ -35,17 +35,17 @@ header {
             justify-content: center;
             height: .1rem; }
         header .nav-container .logo-container .nav-icon-container .menu {
-          display: none; }
-        @media screen and (max-width: 768px) {
+          display: inline-block; }
+        @media only screen and (min-width: 481px) {
           header .nav-container .logo-container .nav-icon-container .menu {
-            display: inline-block; } }
+            display: none; } }
     header .nav-container .search-container {
       background-color: grey;
       height: 4rem;
       position: relative; }
       header .nav-container .search-container .searchfield-container {
         position: absolute;
-        top: 1rem;
+        top: .7rem;
         left: 1rem;
         bottom: 1rem;
         right: 1rem;
@@ -56,7 +56,7 @@ header {
           width: 18rem;
           font-size: 1.25rem;
           border: 0; }
-        header .nav-container .search-container .searchfield-container .nav-submit {
+        header .nav-container .search-container .searchfield-container .nav-submit-icon {
           position: absolute;
           width: 6.8rem;
           height: 85%;
@@ -65,55 +65,77 @@ header {
           border: none;
           border-radius: .25rem;
           left: 18.2rem; }
-          header .nav-container .search-container .searchfield-container .nav-submit .search-logo {
+          header .nav-container .search-container .searchfield-container .nav-submit-icon .search-logo {
             height: 80%; }
-      header .nav-container .search-container .links {
-        position: absolute;
-        display: inline-block; }
-      @media screen and (max-width: 768px) {
-        header .nav-container .search-container .links {
-          display: none; } }
+          @media screen and (min-width: 481px) {
+            header .nav-container .search-container .searchfield-container .nav-submit-icon .search-logo {
+              display: none; } }
+        @media screen and (min-width: 481px) {
+          header .nav-container .search-container .searchfield-container .nav-submit-icon {
+            display: none; } }
+        header .nav-container .search-container .searchfield-container .nav-submit {
+          display: none; }
+        @media screen and (min-width: 481px) {
+          header .nav-container .search-container .searchfield-container .nav-submit {
+            display: inline-block;
+            position: absolute;
+            width: 6.8rem;
+            height: 85%;
+            background-color: teal;
+            color: white;
+            border: none;
+            border-radius: .25rem;
+            border: 1px solid red; } }
+        header .nav-container .search-container .searchfield-container .links {
+          position: absolute;
+          display: none; }
+        @media screen and (min-width: 481px) {
+          header .nav-container .search-container .searchfield-container .links {
+            display: inline-block; } }
 
 main .hero-header {
   position: relative;
   background: lightgrey;
   height: 52rem; }
-  main .hero-header .agent-img {
+  main .hero-header .image-container .agent-img {
     position: absolute;
     left: 1rem;
     height: 25rem; }
-  main .hero-header .name-container {
-    position: absolute;
-    top: 24rem;
-    left: 1rem; }
-    main .hero-header .name-container .agent-name {
-      font-size: 3rem;
-      position: relative;
-      width: 90vw;
-      margin-top: 1rem;
-      margin-bottom: 0; }
-    main .hero-header .name-container .realtor-cpyrght {
-      position: relative;
-      font-size: 1rem;
-      width: 90vw;
-      margin-top: 0;
-      color: grey; }
-    main .hero-header .name-container .contact-btn {
+  main .hero-header .hero-name-container {
+    border: 1px solid red;
+    display: flex; }
+    main .hero-header .hero-name-container .name-container {
       position: absolute;
-      width: 95%;
-      background-color: teal;
+      top: 24rem;
+      left: 1rem; }
+      main .hero-header .hero-name-container .name-container .agent-name {
+        font-size: 3rem;
+        position: relative;
+        width: 90vw;
+        margin-top: 1rem;
+        margin-bottom: 0; }
+      main .hero-header .hero-name-container .name-container .realtor-cpyrght {
+        position: relative;
+        font-size: 1rem;
+        width: 90vw;
+        margin-top: 0;
+        color: grey; }
+      main .hero-header .hero-name-container .name-container .contact-btn {
+        position: absolute;
+        width: 95%;
+        background-color: teal;
+        height: 3rem;
+        border-radius: .25rem;
+        color: white;
+        font-size: 2rem; }
+    main .hero-header .hero-name-container .hero-i-container {
+      position: absolute;
+      top: 35rem;
+      width: 90%;
+      left: 1rem;
       height: 3rem;
-      border-radius: .25rem;
-      color: white;
-      font-size: 2rem; }
-  main .hero-header .hero-i-container {
-    position: absolute;
-    top: 35rem;
-    width: 90%;
-    left: 1rem;
-    height: 3rem;
-    display: flex;
-    justify-content: space-between; }
+      display: flex;
+      justify-content: space-between; }
   main .hero-header .hero-contact-container {
     position: absolute;
     top: 38rem;
