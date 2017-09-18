@@ -16,7 +16,7 @@ header {
           display: none; }
         header .nav-container .logo-container .logo .mbl-logo {
           display: inline-block; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 481px) {
           header .nav-container .logo-container .logo .lrg-logo {
             display: inline-block; }
           header .nav-container .logo-container .logo .mbl-logo {
@@ -36,7 +36,7 @@ header {
             height: .1rem; }
         header .nav-container .logo-container .nav-icon-container .menu {
           display: inline-block; }
-        @media only screen and (min-width: 481px) {
+        @media only screen and (min-width: 768px) {
           header .nav-container .logo-container .nav-icon-container .menu {
             display: none; } }
     header .nav-container .search-container {
@@ -56,6 +56,10 @@ header {
           width: 18rem;
           font-size: 1.25rem;
           border: 0; }
+        @media screen and (min-width: 481px) {
+          header .nav-container .search-container .searchfield-container .nav-input {
+            width: 14rem;
+            font-size: 1rem; } }
         header .nav-container .search-container .searchfield-container .nav-submit-icon {
           position: absolute;
           width: 6.8rem;
@@ -73,41 +77,48 @@ header {
         @media screen and (min-width: 481px) {
           header .nav-container .search-container .searchfield-container .nav-submit-icon {
             display: none; } }
-        header .nav-container .search-container .searchfield-container .nav-submit {
-          display: none; }
-        @media screen and (min-width: 481px) {
-          header .nav-container .search-container .searchfield-container .nav-submit {
-            display: inline-block;
-            position: absolute;
-            width: 6.8rem;
-            height: 85%;
-            background-color: teal;
-            color: white;
-            border: none;
-            border-radius: .25rem;
-            border: 1px solid red; } }
         header .nav-container .search-container .searchfield-container .links {
           position: absolute;
           display: none; }
+          header .nav-container .search-container .searchfield-container .links .nav-submit {
+            display: none; }
+          @media screen and (min-width: 481px) {
+            header .nav-container .search-container .searchfield-container .links .nav-submit {
+              display: inline-block;
+              background-color: teal;
+              color: white;
+              border: none;
+              border-radius: .25rem; } }
         @media screen and (min-width: 481px) {
           header .nav-container .search-container .searchfield-container .links {
-            display: inline-block; } }
+            display: flex;
+            position: absolute;
+            right: 0;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            width: 30rem; } }
 
 main .hero-header {
   position: relative;
   background: lightgrey;
   height: 52rem; }
-  main .hero-header .image-container .agent-img {
-    position: absolute;
-    left: 1rem;
+  main .hero-header .image-container {
     height: 25rem; }
+    main .hero-header .image-container .agent-img {
+      position: absolute;
+      left: 1rem;
+      height: 25rem; }
+    @media screen and (min-width: 481px) {
+      main .hero-header .image-container .agent-img {
+        height: 15rem; } }
   main .hero-header .hero-name-container {
-    border: 1px solid red;
+    height: 12rem;
     display: flex; }
     main .hero-header .hero-name-container .name-container {
       position: absolute;
-      top: 24rem;
-      left: 1rem; }
+      left: 1rem;
+      height: 4rem; }
       main .hero-header .hero-name-container .name-container .agent-name {
         font-size: 3rem;
         position: relative;
@@ -146,14 +157,24 @@ main .hero-header {
     flex-direction: column;
     justify-content: space-between; }
     main .hero-header .hero-contact-container i {
-      color: teal; }
+      color: teal;
+      display: flex;
+      flex: 1 0 1rem; }
+      main .hero-header .hero-contact-container i .phn-icn-space {
+        width: 2rem; }
+      main .hero-header .hero-contact-container i .dsktp-icn-space {
+        width: 1.3rem; }
+      main .hero-header .hero-contact-container i .bldng-icn-space {
+        width: 1.9rem; }
+      main .hero-header .hero-contact-container i .nwpr-icn-space {
+        width: 1.1rem; }
       main .hero-header .hero-contact-container i span {
         font-size: 1rem; }
 
 main .content-container {
   position: relative;
   background-color: white;
-  height: 68rem; }
+  height: 76rem; }
   main .content-container .agent-select {
     position: absolute;
     left: 1rem;
@@ -179,7 +200,7 @@ main .content-container {
 
 footer {
   position: absolute;
-  width: 100vw;
+  width: 94vw;
   top: 137rem;
   display: flex;
   background-color: teal;
