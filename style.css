@@ -97,7 +97,10 @@ header {
             justify-content: space-around;
             align-items: center;
             height: 100%;
-            width: 30rem; } }
+            width: 30rem;
+            color: white;
+            font-size: .9rem;
+            text-decoration: underline; } }
 
 main .hero-header {
   position: relative;
@@ -112,6 +115,9 @@ main .hero-header {
     @media screen and (min-width: 481px) {
       main .hero-header .image-container .agent-img {
         height: 15rem; } }
+  @media screen and (min-width: 481px) {
+    main .hero-header .image-container {
+      height: 0; } }
   main .hero-header .hero-name-container {
     height: 12rem;
     display: flex; }
@@ -139,6 +145,15 @@ main .hero-header {
         border-radius: .25rem;
         color: white;
         font-size: 2rem; }
+      @media screen and (min-width: 481px) {
+        main .hero-header .hero-name-container .name-container .contact-btn {
+          top: 8rem; } }
+    @media screen and (min-width: 481px) {
+      main .hero-header .hero-name-container .name-container {
+        position: absolute;
+        left: 14rem;
+        height: 4rem;
+        width: 33%; } }
     main .hero-header .hero-name-container .hero-i-container {
       position: absolute;
       top: 35rem;
@@ -147,6 +162,15 @@ main .hero-header {
       height: 3rem;
       display: flex;
       justify-content: space-between; }
+    @media screen and (min-width: 481px) {
+      main .hero-header .hero-name-container .hero-i-container {
+        position: absolute;
+        top: 12rem;
+        left: 14rem;
+        width: 33%; } }
+  @media screen and (min-width: 481px) {
+    main .hero-header .hero-name-container {
+      height: 0; } }
   main .hero-header .hero-contact-container {
     position: absolute;
     top: 38rem;
@@ -170,6 +194,15 @@ main .hero-header {
         width: 1.1rem; }
       main .hero-header .hero-contact-container i span {
         font-size: 1rem; }
+  @media screen and (min-width: 481px) {
+    main .hero-header .hero-contact-container {
+      top: 1rem;
+      left: 30rem;
+      width: 33%; } }
+
+@media screen and (min-width: 481px) {
+  main .hero-header {
+    height: 15rem; } }
 
 main .content-container {
   position: relative;
@@ -184,6 +217,31 @@ main .content-container {
     background-color: white;
     font-size: 1rem;
     font-weight: bold; }
+  @media screen and (min-width: 481px) {
+    main .content-container .agent-select {
+      display: none; } }
+  main .content-container .content-tab {
+    display: none; }
+    main .content-container .content-tab .tablinks {
+      height: 5rem;
+      background-color: white;
+      width: 25%;
+      border: 2px solid grey;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font-size: 1.1rem;
+      color: grey; }
+    main .content-container .content-tab .active {
+      color: teal;
+      border: 2px solid teal;
+      border-top: none;
+      border-left: none;
+      border-right: none; }
+  @media screen and (min-width: 481px) {
+    main .content-container .content-tab {
+      display: flex;
+      justify-content: space-around; } }
   main .content-container .content-block {
     position: absolute;
     left: 1rem;
@@ -191,12 +249,19 @@ main .content-container {
     width: 90%;
     font-size: 1.25rem;
     line-height: 150%; }
+  @media screen and (min-width: 481px) {
+    main .content-container .content-block {
+      width: 65%; } }
   main .content-container .designation-container {
     position: absolute;
     left: 1rem;
     top: 58rem; }
     main .content-container .designation-container h2 {
       padding-top: 2rem; }
+  @media screen and (min-width: 481px) {
+    main .content-container .designation-container {
+      top: 3rem;
+      left: 34rem; } }
 
 footer {
   position: absolute;
@@ -233,3 +298,7 @@ footer {
     font-size: 1.2rem; }
     footer .footer-links a {
       color: white; }
+
+@media screen and (min-width: 481px) {
+  footer {
+    top: 78rem; } }
